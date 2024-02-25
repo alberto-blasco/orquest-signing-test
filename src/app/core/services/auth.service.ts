@@ -6,7 +6,7 @@ import { MessageService } from 'primeng/api';
 
 import { User } from '../models/user.model';
 
-const TOKEN_EXPIRATION = 1 * 60 * 1000; // 1h
+const TOKEN_EXPIRATION = 60 * 60 * 1000; // 1h
 
 @Injectable({
   providedIn: 'root',
