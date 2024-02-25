@@ -1,0 +1,17 @@
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  width: 100%;
+
+  .invalid small {
+    color: #e24c4c;
+  }
+}

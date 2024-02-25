@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-GB" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4677175911030006427" datatype="html">
+        <source>test</source>
+        <target>test en español</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/molecules/nav-bar/nav-bar.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

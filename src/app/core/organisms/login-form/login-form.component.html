@@ -1,0 +1,23 @@
+<form (ngSubmit)="submitForm()" [formGroup]="loginForm">
+  <div class="form-group">
+    <label i18n for="email">Email</label>
+    <input pInputText id="email" type="text" formControlName="email" class="form-control" autocomplete="email" />
+    <div *ngIf="isInvalid(email)" class="invalid">
+      <small i18n *ngIf="email?.errors?.['required']">Email es obligatorio</small>
+      <small i18n *ngIf="email?.errors?.['email']">Email debe ser una dirección válida de email</small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label i18n for="password">Contraseña</label>
+    <input pInputText id="password" type="password" formControlName="password" class="form-control" />
+    <div *ngIf="isInvalid(password)" class="invalid">
+      <small i18n *ngIf="password?.errors?.['required']">Contraseña obligatoria</small>
+      <small i18n *ngIf="password?.errors?.['minlength']">La contraseña debe tener al menos 6 carácteres</small>
+    </div>
+  </div>
+
+  <p-button i18n type="submit" [loading]="loading" [disabled]="loginForm.pristine || loginForm.invalid"
+    >Guardar</p-button
+  >
+</form>

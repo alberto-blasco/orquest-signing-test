@@ -1,0 +1,5 @@
+<p-menu #menu [model]="menuItems" [popup]="true" />
+
+<div aria-hidden="true" (click)="menu.toggle($event)" (keyup)="menu.toggle($event)">
+  <img [src]="languageFlag" alt="Selector de idioma" class="selected-language" width="30px" height="30px" />
+</div>
