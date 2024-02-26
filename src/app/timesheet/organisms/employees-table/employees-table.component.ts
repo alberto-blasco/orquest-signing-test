@@ -1,18 +1,15 @@
 import { AsyncPipe, NgFor } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TableModule } from 'primeng/table';
-import { map, of, tap, zip } from 'rxjs';
 import dayjs from 'dayjs';
-import weekOfYear from 'dayjs/plugin/weekOfYear';
+import { TableModule } from 'primeng/table';
+import { map, of, zip } from 'rxjs';
 
-import { Employee } from '../../models/employee';
-import { EmployeesService } from '../../services/employees.service';
-import { EmployeeTableFilters } from '../../models/filters';
-import { getHours, isIncompleteEntry } from '../../utils/schedule';
 import { DateSchedule } from '../../models/date-schedule';
-
-dayjs.extend(weekOfYear);
+import { Employee } from '../../models/employee';
+import { EmployeeTableFilters } from '../../models/filters';
+import { EmployeesService } from '../../services/employees.service';
+import { getHours, isIncompleteEntry } from '../../utils/schedule';
 
 interface Column {
   field: string;
@@ -44,8 +41,7 @@ export class EmployeesTableComponent implements OnInit, OnChanges {
   ngOnInit(): void {
     this.employeesRows$ = zip(this.employeesService.getEmployees(), this.employeesService.getDateSchedule()).pipe(
       map(([employees, dateSchedule]) => this.composeTableData(employees, dateSchedule)),
-      map(data => Object.values(data)),
-      tap(console.log)
+      map(data => Object.values(data))
     );
   }
 

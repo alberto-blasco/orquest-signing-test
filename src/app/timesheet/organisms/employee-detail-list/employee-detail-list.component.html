@@ -7,7 +7,7 @@
   ></p-inputSwitch>
 </div>
 
-<p-table [value]="scheduleData">
+<p-table [value]="scheduleData" rowGroupMode="subheader" groupRowsBy="week">
   <ng-template pTemplate="header">
     <tr>
       <th></th>
@@ -16,6 +16,18 @@
       <th i18n>Total</th>
     </tr>
   </ng-template>
+
+  <ng-template pTemplate="groupheader" let-date>
+    <tr pRowGroupHeader>
+      <td colspan="3">
+        <span i18n style="text-decoration: underline">Semana {{ date.week }}</span>
+      </td>
+      <td>
+        <strong i18n>{{ getWeekTotal(date.week) }} h</strong>
+      </td>
+    </tr>
+  </ng-template>
+
   <ng-template pTemplate="body" let-date>
     <tr [class.incomplete]="isIncompleteDate(date.schedule[0])">
       <td>{{ date.date | date: 'longDate' }}</td>
