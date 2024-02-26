@@ -1,1 +1,5 @@
-<app-employee-detail-list [employee]="employee" [schedule]="dateSchedule" />
+<div class="header">
+  <app-employee-detail-header [employee]="employee" [summary]="scheduleSummary" />
+</div>
+
+<app-employee-detail-list [schedule]="dateSchedule" />

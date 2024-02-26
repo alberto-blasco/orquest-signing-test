@@ -3,7 +3,6 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { TableModule } from 'primeng/table';
 
-import { Employee } from '../../models/employee';
 import { DateSchedule } from '../../models/date-schedule';
 import { HourPipe } from '../../pipes/hour.pipe';
 import { HoursDiffPipe } from '../../pipes/hours-diff.pipe';
@@ -18,7 +17,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './employee-detail-list.component.scss',
 })
 export class EmployeeDetailListComponent implements OnChanges {
-  @Input() employee?: Employee;
   @Input() schedule: DateSchedule[] = [];
 
   scheduleData: DateSchedule[] = this.schedule;
