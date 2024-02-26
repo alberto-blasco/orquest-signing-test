@@ -1,0 +1,35 @@
+<div>
+  <h3>
+    <strong>{{ employee?.name }} {{ employee?.lastName }}</strong>
+  </h3>
+</div>
+
+<div class="filter">
+  <label i18n for="invalids-switch">Mostrar solo entradas inválidas</label>
+  <p-inputSwitch
+    id="invalids-switch"
+    [ngModel]="onlyInvalids"
+    (onChange)="changeFilter($event.checked)"
+  ></p-inputSwitch>
+</div>
+
+<p-table [value]="scheduleData">
+  <ng-template pTemplate="header">
+    <tr>
+      <th></th>
+      <th i18n>Hora entrada</th>
+      <th i18n>Hora salida</th>
+      <th i18n>Total</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-date>
+    <tr [class.incomplete]="isIncompleteDate(date.schedule[0])">
+      <td>{{ date.date | date: 'longDate' }}</td>
+      <td>{{ date.schedule[0]?.startTime ? (date.schedule[0].startTime | hour) : '-' }}</td>
+      <td>{{ date.schedule[0]?.endTime ? (date.schedule[0].endTime | hour) : '-' }}</td>
+      <td>
+        <strong>{{ date.schedule[0] | hoursDiff }}</strong>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
