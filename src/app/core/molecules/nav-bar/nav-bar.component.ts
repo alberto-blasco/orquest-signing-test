@@ -1,5 +1,6 @@
 import { NgIf, AsyncPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { Observable, of } from 'rxjs';
 
@@ -12,7 +13,7 @@ import { AuthService } from '../../services/auth.service';
   standalone: true,
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
-  imports: [ButtonModule, UserNavComponent, LanguageSelectorComponent, NgIf, AsyncPipe],
+  imports: [ButtonModule, UserNavComponent, LanguageSelectorComponent, NgIf, AsyncPipe, RouterLink],
 })
 export class NavBarComponent implements OnInit {
   isUserAuthenticated: Observable<boolean> = of(false);
