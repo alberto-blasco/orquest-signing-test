@@ -9,6 +9,10 @@ export const routes: Routes = [
     canActivateChild: [authGuard],
     children: [
       {
+        path: '',
+        loadChildren: () => import('./timesheet/timesheet.module').then(m => m.TimesheetModule),
+      },
+      {
         path: 'login',
         component: LoginPageComponent,
       },

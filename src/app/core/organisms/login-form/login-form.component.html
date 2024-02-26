@@ -10,14 +10,21 @@
 
   <div class="form-group">
     <label i18n for="password">Contraseña</label>
-    <input pInputText id="password" type="password" formControlName="password" class="form-control" />
+    <input
+      pInputText
+      id="password"
+      type="password"
+      formControlName="password"
+      class="form-control"
+      autocomplete="current-password"
+    />
     <div *ngIf="isInvalid(password)" class="invalid">
       <small i18n *ngIf="password?.errors?.['required']">Contraseña obligatoria</small>
       <small i18n *ngIf="password?.errors?.['minlength']">La contraseña debe tener al menos 6 carácteres</small>
     </div>
   </div>
 
-  <p-button i18n type="submit" [loading]="loading" [disabled]="loginForm.pristine || loginForm.invalid"
-    >Guardar</p-button
-  >
+  <p-button i18n type="submit" [loading]="loading" [disabled]="loginForm.pristine || loginForm.invalid">
+    Iniciar sesión
+  </p-button>
 </form>

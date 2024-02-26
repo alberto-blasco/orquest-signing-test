@@ -1,0 +1,12 @@
+<p-card>
+  <div class="employee-header">
+    <div class="personal-data">
+      <h2>{{ employee?.name }} {{ employee?.lastName }}</h2>
+    </div>
+    <div class="schedule-data">
+      <p><strong i18n>Total semanal:</strong> {{ summary?.weekTotal }} h</p>
+      <p><strong i18n>Total mensual:</strong> {{ summary?.monthTotal }} h</p>
+      <p><strong i18n>Total anual:</strong> {{ summary?.yearTotal }} h</p>
+    </div>
+  </div>
+</p-card>

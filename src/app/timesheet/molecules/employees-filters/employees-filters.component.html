@@ -1,0 +1,22 @@
+<div class="filter">
+  <div>
+    <label i18n for="month-filter">Filtro por mes</label>
+    <p-calendar
+      id="month-filter"
+      [ngModel]="filters.month"
+      view="month"
+      dateFormat="mm/yy"
+      [readonlyInput]="true"
+      (ngModelChange)="changeFilter('month', $event)"
+    ></p-calendar>
+  </div>
+  <div>
+    <label i18n for="view-filter">Vista diaria</label>
+    <p-inputSwitch
+      id="view-filter"
+      [ngModel]="filters.view === 'weekly'"
+      (onChange)="changeFilter('view', $event.checked)"
+    ></p-inputSwitch>
+    <label i18n for="view-filter">Vista semanal</label>
+  </div>
+</div>
