@@ -9,6 +9,7 @@ import 'dayjs/locale/es';
 
 import { EmployeesComponent } from './pages/employees/employees.component';
 import { EmployeeDetailComponent } from './pages/employee-detail/employee-detail.component';
+import { IssuesComponent } from './pages/issues/issues.component';
 
 dayjs.extend(timezone);
 dayjs.extend(utc);
@@ -18,6 +19,7 @@ dayjs.locale('es');
 const routes: Routes = [
   { path: '', component: EmployeesComponent },
   { path: 'employee/:id', component: EmployeeDetailComponent },
+  { path: 'issues', component: IssuesComponent },
 ];
 
 @NgModule({
