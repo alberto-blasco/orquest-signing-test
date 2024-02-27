@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { zip, map, Observable, of, finalize } from 'rxjs';
+import { zip, map, Observable, of, finalize, delay } from 'rxjs';
 
 import { DateSchedule, IncompleteSchedule } from '../../models/date-schedule';
 import { Employee } from '../../models/employee';
@@ -28,6 +28,7 @@ export class IssuesComponent implements OnInit {
       this.employeesService.getDateSchedule()
     ).pipe(
       map(([employees, dateSchedule]) => this.composeInvalidEntries(employees, dateSchedule)),
+      delay(0),
       finalize(() => (this.loading = false))
     );
   }
