@@ -16,5 +16,5 @@ import { HourPipe } from '../../pipes/hour.pipe';
 })
 export class IssuesTableComponent {
   @Input() incompleteEntries$: Observable<IncompleteSchedule[]> = of([]);
-  @Input() loading: boolean = false;
+  @Input() loading!: boolean;
 }
