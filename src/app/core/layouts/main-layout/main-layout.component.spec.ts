@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { AuthService } from 'app/core/services/auth.service';
+import { authServiceStub } from 'mock_data/mock-services';
 import { MainLayoutComponent } from './main-layout.component';
 
 describe('MainLayoutComponent', () => {
@@ -9,6 +11,7 @@ describe('MainLayoutComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MainLayoutComponent],
+      providers: [{ provide: AuthService, useValue: authServiceStub }],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MainLayoutComponent);

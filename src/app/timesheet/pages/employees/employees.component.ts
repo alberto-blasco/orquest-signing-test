@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { INITIAL_FILTERS_VALUES } from '../../constants/filters';
 import { EmployeesFiltersComponent } from '../../molecules/employees-filters/employees-filters.component';
 import { EmployeeTableFilters } from '../../models/filters';
 import { EmployeesTableComponent } from '../../organisms/employees-table/employees-table.component';
@@ -12,7 +13,7 @@ import { EmployeesTableComponent } from '../../organisms/employees-table/employe
   imports: [EmployeesTableComponent, EmployeesFiltersComponent],
 })
 export class EmployeesComponent {
-  filters: EmployeeTableFilters = { view: 'daily', month: new Date() };
+  filters: EmployeeTableFilters = INITIAL_FILTERS_VALUES;
 
   constructor() {}
 

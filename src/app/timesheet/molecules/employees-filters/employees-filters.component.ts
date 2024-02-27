@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CalendarModule } from 'primeng/calendar';
 import { InputSwitchModule } from 'primeng/inputswitch';
 
+import { INITIAL_FILTERS_VALUES } from '../../constants/filters';
 import { EmployeeTableFilters } from '../../models/filters';
 
 @Component({
@@ -15,7 +16,7 @@ import { EmployeeTableFilters } from '../../models/filters';
 export class EmployeesFiltersComponent {
   @Output() filtersChange = new EventEmitter<EmployeeTableFilters>();
 
-  filters: EmployeeTableFilters = { view: 'daily', month: new Date() };
+  filters: EmployeeTableFilters = INITIAL_FILTERS_VALUES;
 
   changeFilter(filterName: string, value: unknown): void {
     if (filterName === 'view') {

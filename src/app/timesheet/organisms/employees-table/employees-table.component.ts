@@ -5,6 +5,7 @@ import dayjs from 'dayjs';
 import { TableModule } from 'primeng/table';
 import { map, of, zip } from 'rxjs';
 
+import { INITIAL_FILTERS_VALUES } from '../../constants/filters';
 import { DateSchedule } from '../../models/date-schedule';
 import { Employee } from '../../models/employee';
 import { EmployeeTableFilters } from '../../models/filters';
@@ -31,7 +32,7 @@ interface EmployeeRow {
   styleUrl: './employees-table.component.scss',
 })
 export class EmployeesTableComponent implements OnInit, OnChanges {
-  @Input() filters!: EmployeeTableFilters;
+  @Input() filters: EmployeeTableFilters = INITIAL_FILTERS_VALUES;
 
   employeesRows$ = of([] as EmployeeRow[]);
   middleColumns: Column[] = [];
