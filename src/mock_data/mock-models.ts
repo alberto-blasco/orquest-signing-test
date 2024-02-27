@@ -1,6 +1,7 @@
-import { User } from '../app/core/models/user.model';
-import { DateSchedule } from '../app/timesheet/models/date-schedule';
-import { Employee } from '../app/timesheet/models/employee';
+import { User } from 'app/core/models/user.model';
+import { DataSource } from 'app/timesheet/models/data-source';
+import { DateSchedule } from 'app/timesheet/models/date-schedule';
+import { Employee } from 'app/timesheet/models/employee';
 
 export const userMock: User = {
   name: 'Ash',
@@ -22,4 +23,9 @@ export const dateScheduleMock: DateSchedule = {
       endTime: '2024-02-05T12:00:00Z',
     },
   ],
+};
+
+export const dataSourceMock: DataSource = {
+  employees: [employeeMock],
+  dates: [dateScheduleMock],
 };
