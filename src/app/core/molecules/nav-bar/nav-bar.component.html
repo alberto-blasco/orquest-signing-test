@@ -3,6 +3,7 @@
   <div class="nav-items">
     @if (isUserAuthenticated | async) {
       <p-button label="Panel" [link]="true" [routerLink]="['/']"></p-button>
+      <p-button label="Incidencias" [link]="true" [routerLink]="['/issues']"></p-button>
     }
   </div>
   <div class="user-items">

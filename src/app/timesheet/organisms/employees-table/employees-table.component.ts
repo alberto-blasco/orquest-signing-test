@@ -2,8 +2,9 @@ import { AsyncPipe, NgFor } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import dayjs from 'dayjs';
+import { MessageService } from 'primeng/api';
 import { TableModule } from 'primeng/table';
-import { map, of, zip } from 'rxjs';
+import { catchError, finalize, map, of, zip } from 'rxjs';
 
 import { DateSchedule } from '../../models/date-schedule';
 import { Employee } from '../../models/employee';
@@ -35,13 +36,28 @@ export class EmployeesTableComponent implements OnInit, OnChanges {
 
   employeesRows$ = of([] as EmployeeRow[]);
   middleColumns: Column[] = [];
+  loading: boolean = false;
 
-  constructor(private employeesService: EmployeesService) {}
+  constructor(
+    private employeesService: EmployeesService,
+    private messageService: MessageService
+  ) {}
 
   ngOnInit(): void {
+    this.loading = true;
+
     this.employeesRows$ = zip(this.employeesService.getEmployees(), this.employeesService.getDateSchedule()).pipe(
+      catchError(() => {
+        this.messageService.add({
+          severity: 'error',
+          summary: 'Error',
+          detail: 'No se ha podido obtener el listado de empleados',
+        });
+        return of([[], []]);
+      }),
       map(([employees, dateSchedule]) => this.composeTableData(employees, dateSchedule)),
-      map(data => Object.values(data))
+      map(data => Object.values(data)),
+      finalize(() => (this.loading = false))
     );
   }
 

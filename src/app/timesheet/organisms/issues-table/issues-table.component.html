@@ -1,0 +1,18 @@
+<p-table [value]="(incompleteEntries$ | async) ?? []" [scrollable]="true" [loading]="loading">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th i18n>Empleado</th>
+      <th i18n>Fecha</th>
+      <th i18n>Hora entrada</th>
+      <th i18n>Hora salida</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-row>
+    <tr [routerLink]="'/employee/' + row.employeeId">
+      <td>{{ row.employee.name }} {{ row.employee.lastName }}</td>
+      <td>{{ row.date | date: 'longDate' }}</td>
+      <td [class.incomplete]="!row.startTime">{{ row.startTime ? (row.startTime | hour) : '-' }}</td>
+      <td [class.incomplete]="!row.endTime">{{ row.endTime ? (row.endTime | hour) : '-' }}</td>
+    </tr>
+  </ng-template>
+</p-table>
