@@ -1,4 +1,4 @@
-<p-table [columns]="middleColumns" [value]="(employeesRows$ | async) ?? []" [scrollable]="true">
+<p-table [columns]="middleColumns" [value]="(employeesRows$ | async) ?? []" [scrollable]="true" [loading]="loading">
   <ng-template pTemplate="header" let-columns>
     <tr>
       <th i18n pFrozenColumn style="min-width: 160px">Empleado</th>

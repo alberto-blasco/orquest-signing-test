@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, defer, first, isObservable, map, mergeMap, of, shareReplay } from 'rxjs';
+import { Observable, defer, delay, first, isObservable, map, mergeMap, of, shareReplay } from 'rxjs';
 
 import { API_BASE_URL, CACHE_TIME } from '../../core/constants/api';
 import { DataSource } from '../models/data-source';
@@ -18,6 +18,7 @@ export class EmployeesService {
 
   private getData() {
     this.dataSource$ = this.http.get<DataSource>(API_BASE_URL + '/prueba-orquest-datos.json').pipe(
+      delay(750), // Just simulate real api delay
       shareReplay({ bufferSize: 1, windowTime: CACHE_TIME, refCount: false }),
       first(
         null,
