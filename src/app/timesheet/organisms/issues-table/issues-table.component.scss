@@ -1,0 +1,21 @@
+:host ::ng-deep {
+  .p-datatable {
+    .p-datatable-wrapper {
+      min-height: 200px;
+    }
+
+    .p-datatable-loading-overlay {
+      background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .p-datatable-loading-icon {
+      color: var(--orquest-primary);
+      height: 2rem;
+      width: 2rem;
+    }
+
+    td.incomplete {
+      background-color: var(--orquest-incomplete);
+    }
+  }
+}
