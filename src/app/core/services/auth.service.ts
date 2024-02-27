@@ -34,8 +34,13 @@ export class AuthService {
 
     return new Observable(subscriber => {
       setTimeout(() => {
-        this.setAuthState(true);
-        subscriber.next('OK');
+        if (email) {
+          this.setAuthState(true);
+          subscriber.next('OK');
+        } else {
+          this.setAuthState(false);
+          subscriber.error('KO');
+        }
         subscriber.complete();
       }, 1000);
     });
@@ -76,10 +81,11 @@ export class AuthService {
       localStorage.setItem('user', JSON.stringify(this.user));
       localStorage.setItem('access_token', JSON.stringify(mockToken));
 
-      this.router.navigate(['users']);
+      this.router.navigate(['']);
     } else {
       localStorage.removeItem('user');
       localStorage.removeItem('access_token');
+
       this.router.navigate(['login']);
     }
   }
