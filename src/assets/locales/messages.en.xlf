@@ -1,13 +1,181 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en-GB" datatype="plaintext" original="ng2.template">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="4677175911030006427" datatype="html">
-        <source>test</source>
-        <target>test en español</target>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <target>Email</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/core/molecules/nav-bar/nav-bar.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="sourcefile">src/app/core/organisms/login-form/login-form.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4084768570383655429" datatype="html">
+        <source>Email es obligatorio</source>
+        <target>Email is mandatory</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/organisms/login-form/login-form.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4920003852971619675" datatype="html">
+        <source>Email debe ser una dirección válida de email</source>
+        <target>Email should be a valid email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/organisms/login-form/login-form.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7132730488496169673" datatype="html">
+        <source>Contraseña</source>
+        <target>Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/organisms/login-form/login-form.component.html</context>
+          <context context-type="linenumber">12,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8769266210466087473" datatype="html">
+        <source>Contraseña obligatoria</source>
+        <target>Password is mandatory</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/organisms/login-form/login-form.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9006215828131579867" datatype="html">
+        <source>La contraseña debe tener al menos 6 carácteres</source>
+        <target>Password should be at least 6 characters</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/organisms/login-form/login-form.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2330215751936654880" datatype="html">
+        <source> Iniciar sesión </source>
+        <target> Login </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/organisms/login-form/login-form.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6824174427350613445" datatype="html">
+        <source>¡Bienvenido/a!</source>
+        <target>Welcome!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core/pages/login-page/login-page.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="939603818133021207" datatype="html">
+        <source>Total semanal:</source>
+        <target>Weekly total:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/molecules/employee-detail-header/employee-detail-header.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="486947852666796125" datatype="html">
+        <source>Total mensual:</source>
+        <target>Monthly total:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/molecules/employee-detail-header/employee-detail-header.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7360198282173069914" datatype="html">
+        <source>Total anual:</source>
+        <target>Annual total:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/molecules/employee-detail-header/employee-detail-header.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5107304019647919387" datatype="html">
+        <source>Filtro por mes</source>
+        <target>Month filter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/molecules/employees-filters/employees-filters.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8312261499082430233" datatype="html">
+        <source>Vista diaria</source>
+        <target>Daily view</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/molecules/employees-filters/employees-filters.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7335588292491657217" datatype="html">
+        <source>Vista semanal</source>
+        <target>Weekly view</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/molecules/employees-filters/employees-filters.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1058732816518883927" datatype="html">
+        <source>Mostrar solo entradas inválidas</source>
+        <target>Show just invalid entries</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employee-detail-list/employee-detail-list.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3442868502581404515" datatype="html">
+        <source>Hora entrada</source>
+        <target>Entry time</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employee-detail-list/employee-detail-list.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7233879319571192281" datatype="html">
+        <source>Hora salida</source>
+        <target>Departure time</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employee-detail-list/employee-detail-list.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3448462145758383019" datatype="html">
+        <source>Total</source>
+        <target>Total</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employee-detail-list/employee-detail-list.component.html</context>
+          <context context-type="linenumber">16,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4430066306882534882" datatype="html">
+        <source>Semana <x id="INTERPOLATION" equiv-text="{{ date.week }}"/></source>
+        <target>Week <x id="INTERPOLATION" equiv-text="{{ date.week }}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employee-detail-list/employee-detail-list.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6056494583249463538" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ getWeekTotal(date.week) }}"/> h</source>
+        <target><x id="INTERPOLATION" equiv-text="{{ getWeekTotal(date.week) }}"/> h</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employee-detail-list/employee-detail-list.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4716231838517270291" datatype="html">
+        <source>Empleado</source>
+        <target>Employee</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employees-table/employees-table.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3643291615491380022" datatype="html">
+        <source>Total mensual</source>
+        <target>Monthly total</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/timesheet/organisms/employees-table/employees-table.component.html</context>
+          <context context-type="linenumber">8,9</context>
         </context-group>
       </trans-unit>
     </body>

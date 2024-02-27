@@ -13,10 +13,8 @@ export class LanguageSelectorComponent implements OnInit {
   menuItems: MenuItem[] | undefined;
   languageFlag: string = '';
 
-  // constructor(private translateService);
-
   ngOnInit(): void {
-    const currentLanguage = 'es';
+    const currentLanguage = $localize.locale;
     const secondaryLanguage = currentLanguage === 'es' ? 'en' : 'es';
     this.languageFlag = `assets/icons/${currentLanguage}.svg`;
 
@@ -30,6 +28,6 @@ export class LanguageSelectorComponent implements OnInit {
   }
 
   changeLanguage(language: string) {
-    console.log('updating language to ', language);
+    window.location.href = `/${language}`;
   }
 }
