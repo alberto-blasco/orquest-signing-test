@@ -7,10 +7,7 @@ import { dateScheduleMock, employeeMock, userMock } from './mock-models';
 export const authServiceStub: Partial<AuthService> = {
   getUser: () => userMock,
   signOut: jasmine.createSpy('signOut'),
-
-  get isAuthenticated() {
-    return () => true;
-  },
+  isAuthenticated: () => false,
 };
 
 export const employeesServiceStub: Partial<EmployeesService> = {
