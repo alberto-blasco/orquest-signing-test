@@ -20,7 +20,7 @@ Para acceder a la aplicación, el usuario deberá iniciar sesión en la página 
 
 ## Aspectos técnicos
 
-Para trabajar en el desarrollo de esta aplicación se ha fijado la versión de Node a la v18. Para comenzar a desarrollar se puede ejecutar `nvm use` para utilizar esta versión. Si no se tiene instalada esta versión, se puede instalar mediante `nvm install` ya que estos comandos leen el fichero `.nvmrc` para saber la versión sobre la que actuar.
+Para trabajar en el desarrollo de esta aplicación se ha fijado la versión de Node a la v18. Para comenzar a desarrollar se puede ejecutar `nvm use` para utilizar esta versión. Si no se tiene instalada esta versión, se puede instalar mediante `nvm install` ya que estos comandos leen el fichero `.nvmrc` para saber la versión sobre la que actuar. Tras esto, se deben instalar las dependencias mediante `npm install` y así poder arrancar el proyecto.
 
 En los servicios desarrollados, se ha procurado usar un enfoque orientado a conectarse a una API externa, por eso se podrán encontrar `delays`, `timeouts` o más métodos de los que realmente podrían haber sido necesarios implementar en el servicio (e.g. obtener un empleado por ID o los fichajes asociados a un empleado) dada la naturaleza local del origen de datos.
 
