@@ -1,0 +1,13 @@
+<nav class="app-navbar">
+  <img src="assets/images/logo-orquest.svg" alt="orquest logo" />
+  <div class="nav-items">
+    @if (isUserAuthenticated | async) {
+      <p-button label="Panel" [link]="true" [routerLink]="['/']"></p-button>
+      <p-button label="Incidencias" [link]="true" [routerLink]="['/issues']"></p-button>
+    }
+  </div>
+  <div class="user-items">
+    <app-language-selector />
+    <app-user-nav *ngIf="isUserAuthenticated | async" />
+  </div>
+</nav>

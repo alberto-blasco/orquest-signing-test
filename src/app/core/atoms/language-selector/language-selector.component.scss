@@ -1,0 +1,17 @@
+.selected-language {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+:host ::ng-deep {
+  .p-menu {
+    width: 80px;
+
+    .p-menuitem-link {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.filter {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1.5rem;
+  margin-bottom: 1rem;
+
+  > div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: flex-start;
+  }
+
+  > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    align-items: center;
+
+    ::ng-deep {
+      .p-inputswitch {
+        .p-inputswitch-slider {
+          background-color: var(--orquest-primary);
+        }
+
+        &:not(.p-inputswitch-checked) .p-inputswitch-slider {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    label {
+      margin-bottom: 4px;
+    }
+  }
+}

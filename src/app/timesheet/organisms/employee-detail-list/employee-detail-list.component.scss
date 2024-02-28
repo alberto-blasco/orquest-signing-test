@@ -1,0 +1,20 @@
+:host ::ng-deep {
+  .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+    background-color: var(--orquest-primary);
+  }
+
+  .p-datatable .p-datatable-tbody > tr.incomplete {
+    background-color: var(--orquest-incomplete);
+  }
+}
+
+.filter {
+  display: flex;
+  column-gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+
+  label {
+    margin-bottom: 4px;
+  }
+}

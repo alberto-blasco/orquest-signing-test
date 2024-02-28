@@ -1,0 +1,18 @@
+.employee-header {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 7rem;
+
+  .personal-data {
+    h2 {
+      margin: 0;
+    }
+  }
+
+  > div {
+    flex: 1;
+  }
+}
